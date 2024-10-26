@@ -12,11 +12,24 @@ const mouseEnter = () => console.log('onmouseenter')
 const mouseLeave = () => console.log('onmouseleave')
 const helpText = 'Enter your name!'
 
-const elements = (<div>
-<h1>{helpText}</h1>
-<input placeholder={helpText} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} />
-<p>{helpText === 'Enter your name' ? 'Yes' : 'No'}</p>
-</div>)
+const Header = () => {
+  return (
+    <header>
+      <h1>Шапка сайта</h1>
+    </header>
+  )
+}
+
+const App = () =>  {
+  return (
+    <div>
+      <Header />
+      <h1>{helpText}</h1>
+      <input placeholder={helpText} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} />
+      <p>{helpText === 'Enter your name' ? 'Yes' : 'No'}</p>
+    </div>
+  )
+}
 
 const root = ReactDOMClient.createRoot(document.getElementById('root'))
-root.render(elements)
+root.render(<App />)
