@@ -12,6 +12,13 @@ import logo from './img/01.png'
              }
         this.mouseEnter = this.mouseEnter.bind(this)
     }
+
+    componentDidUpdate(prevProp) {
+        if(this.state.helpText !== "Help") {
+            console.log('Changed');
+        }
+    }
+
     helpText = 'Enter your name!'
     render() {
       return (
