@@ -16,7 +16,7 @@ dist/
 *.log
 
 # Ignore dependencies installed by npm
-package-lock.json
+packavatar-lock.json
 yarn.lock
 
 # Ignore IDE files
